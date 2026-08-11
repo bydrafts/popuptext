@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61327573a17045cf89b7c02b0d1a0b62, type: 3}
+  m_Name: Heal
+  m_EditorClassIdentifier: PopupText::Drafts.TextPopups.PopupTextAnimation
+  duration: 1.5
+  modules:
+  - rid: 2449546084572725551
+  - rid: 2449546084572725554
+  - rid: 2449546084572725555
+  - rid: 2449546084572725576
+  - rid: 2449546084572725577
+  references:
+    version: 2
+    RefIds:
+    - rid: 2449546084572725551
+      type: {class: Velocity, ns: Drafts.TextPopups.Animations, asm: PopupText}
+      data:
+        initialMin: {x: 0, y: 100}
+        initialMax: {x: 0, y: 100}
+        accel: {x: -70, y: -150}
+        clampMin: {x: 0, y: 0}
+        clampMax: {x: 100, y: 100}
+        fontSizeReference: 36
+    - rid: 2449546084572725554
+      type: {class: Fade, ns: Drafts.TextPopups.Animations, asm: PopupText}
+      data:
+        inDuration: 0.1
+        waitDuration: 1
+        outDuration: 0.5
+    - rid: 2449546084572725555
+      type: {class: BlinkColor, ns: Drafts.TextPopups.Animations, asm: PopupText}
+      data:
+        gradient:
+          serializedVersion: 2
+          key0: {r: 1, g: 1, b: 1, a: 1}
+          key1: {r: 0.35283017, g: 0.9636093, b: 1, a: 1}
+          key2: {r: 0, g: 1, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 32768
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_ColorSpace: 0
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 2
+        duration: 0.25
+        times: 2
+        pingPong: 0
+        useAlpha: 0
+    - rid: 2449546084572725576
+      type: {class: Random, ns: Drafts.TextPopups.Animations, asm: PopupText}
+      data:
+        minPosition: {x: -40, y: -40}
+        maxPosition: {x: 40, y: 40}
+        rotation: {x: 0, y: 0}
+        fontSizeReference: 36
+    - rid: 2449546084572725577
+      type: {class: Scale, ns: Drafts.TextPopups.Animations, asm: PopupText}
+      data:
+        xCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        yCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        duration: 0.3
+        times: 1

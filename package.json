@@ -1,0 +1,13 @@
+{
+  "name": "com.drafts.popuptext",
+  "version": "1.0.0",
+  "displayName": "Drafts - Popup Text",
+  "author": {
+    "name": "Drafts",
+    "email": "iagofonteles1@gmail.com"
+  },
+  "dependencies": {
+    "com.drafts.search": "1.0.0"
+  },
+  "hideInEditor": false
+}
