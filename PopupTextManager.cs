@@ -12,7 +12,7 @@ namespace Drafts.TextPopups
         private readonly Stack<TMP_Text> _pool = new();
         private Camera _camera;
 
-        private void Start()
+        private void Awake()
         {
             _camera = Camera.main;
             textTemplate.gameObject.SetActive(false);
@@ -20,12 +20,17 @@ namespace Drafts.TextPopups
 
         public Coroutine ShowPopup(Vector3 worldPos, string text, PopupTextAnimation anim)
         {
+            var pos = _camera.WorldToScreenPoint(worldPos);
+            return StartCoroutine(PlayAndTrash(pos, text, anim));
+        }
+        
+        public Coroutine ShowWorldPopup(Vector3 worldPos, string text, PopupTextAnimation anim)
+        {
             return StartCoroutine(PlayAndTrash(worldPos, text, anim));
         }
 
-        private IEnumerator PlayAndTrash(Vector3 worldPos, string text, PopupTextAnimation anim)
+        private IEnumerator PlayAndTrash(Vector3 pos, string text, PopupTextAnimation anim)
         {
-            var pos = _camera.WorldToScreenPoint(worldPos);
             var clone = _pool.TryPop(out var t) ? t : Instantiate(textTemplate, textTemplate.transform.parent);
             clone.transform.position = pos;
             clone.text = text;
